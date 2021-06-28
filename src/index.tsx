@@ -6,6 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store/index'
 
+const _JSXStyle = require('styled-jsx/style').default;
+if (typeof global !== 'undefined') {
+    Object.assign(global, { _JSXStyle });
+}
+
 ReactDOM.render(
   <Provider store={store as any}>
     <React.StrictMode>

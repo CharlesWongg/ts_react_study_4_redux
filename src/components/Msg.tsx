@@ -35,7 +35,7 @@ export default class Msg extends React.Component<Props, State> {
         const { messages, sendMsg } = this.props
         const { msg } = this.state
         return (<>
-            <h4>messages:</h4>
+            <h4 className='title'>messages:</h4>
             <input type="text" name="msg" value={msg} onChange={this.onChangeMsg.bind(this)}/>
             <button onClick={() => {
                 sendMsg({
@@ -47,6 +47,11 @@ export default class Msg extends React.Component<Props, State> {
             {messages.length && messages.map(({ message, user }, i) => (<p key={i}>
             <span>{user}: {message}</span>
             </p>))}
+            <style jsx>{`
+            .title {
+                color: red;
+            }
+            `}</style>
         </>)
     }
 }
