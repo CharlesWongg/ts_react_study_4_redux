@@ -1,0 +1,4 @@
+{
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.tsdk": "node_modules\\typescript\\lib"
+}
